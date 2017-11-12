@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <style type="text/css">
+    body {
+    overflow:hidden;
+      font-family: 'TH-Sarabun-PSK', sans-serif;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #4F4F4F;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #FF3333 ;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 10px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 5px;
+    right: 35px;
+  }
+}
+div.i{
+    height:50px;
+    position:fixed;
+    right:8px;
+    bottom:5px;
+    width:100%;
+    z-index: 0;
+    
+}
+
+
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="jm/jquery.mobile-1.4.5.min.css" />
+    <script src="js/jquery.js"></script>
+    <script src="jm/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+
+
+<body>
+<div data-role="header" data-theme="a" >
+    <p>&nbsp <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;   </span> 
+<font>&nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp  &nbsp   &nbsp    Control Collection </font><br>
+
+</div>
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    
+    <a href="index.html"> Home </a>
+  </div>
+</div>
+
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+
+
+
+</script>
+<div data-role="content">
+<form>
+    <label for="flip-2"> Switch 1:</label>
+    <select name="flip-2" id="flip-2" data-role="slider" data-track-theme="c" data-theme="b">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+    </select>
+</form>
+
+<form>
+    <label for="flip-2">Switch 2:</label>
+    <select name="flip-2" id="flip-2" data-role="slider" data-track-theme="a" data-theme="b" align=righ>
+        <option value="off">Off</option>
+        <option value="on">On</option> 
+    </select>
+</form>
+
+
+<form>
+    <label for="flip-2">Switch 3:</label>
+    <select name="flip-2" id="flip-2" data-role="slider" data-track-theme="b" data-theme="b">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+    </select>
+</form>
+
+<form>
+    <label for="flip-2">Switch 4:</label>
+    <select name="flip-2" id="flip-2" data-role="slider" data-track-theme="" data-theme="b">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+    </select>
+</form>
+
+</div>
+
+<div class="i">
+<div  data-position="fixed" data-theme="a">
+<div class="ui-nodisc-icon  ui-alt-icon "><div align=right>
+    <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-a ui-btn-inline">Plus</a>
+</div></div></div></div>
+
+
+</body>
+</html>
